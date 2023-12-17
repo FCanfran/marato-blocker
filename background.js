@@ -1,18 +1,22 @@
 const blockList = [
   "https://es.pornhub.com", 
   "https://www.pornhub.com",
-  "https://xvdeos.com",
+  "https://xvideos.com",
   "https://redtube.com",
+  "https://es.redtube.com",
   "https://chaturbate.com",
   "https://xhamster.com"
 ];
     
-  chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(function() {
     chrome.webNavigation.onCompleted.addListener(redirectIfNecessary);
 });
+chrome.webNavigation.onCompleted.addListener(redirectIfNecessary);
+
 browser.runtime.onInstalled.addListener(function() {
-  browser.webNavigation.onCompleted.addListener(redirectIfNecessary);
-  });
+browser.webNavigation.onCompleted.addListener(redirectIfNecessary);
+});
+browser.webNavigation.onCompleted.addListener(redirectIfNecessary);
   
   function redirectIfNecessary(details) {
     // Check if the URL matches the desired page
