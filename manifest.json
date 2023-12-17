@@ -1,17 +1,25 @@
 {
   "manifest_version": 2,
-  "name": "My Chrome Extension",
+  "name": "Page Redirector",
   "version": "1.0",
-  "description": "A simple Chrome extension",
+  "description": "Redirects to another page when a specific page is accessed",
+  "permissions": [
+    "webNavigation",
+    "activeTab"
+  ],
   "browser_action": {
-    "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
-    }
+      "32": "images/icon32.png"
+    },
+    "default_popup": "popup.html"
   },
-  "permissions": [
-    "activeTab"
-  ]
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
