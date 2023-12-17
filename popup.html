@@ -52,10 +52,10 @@
   </div>
 
   <script>
-    let seconds = 60;
+    let seconds = 15;
 
     function updateCounter() {
-      document.getElementById('counter').textContent = seconds;
+      document.getElementById('counter').textContent = (seconds < 10) ? ("0" + seconds) : seconds;
     }
 
     function decrementCounter() {
@@ -64,7 +64,7 @@
 
       if (seconds <= 0) {
         clearInterval(intervalId);
-        alert('Countdown reached zero!');
+        history.back();
       }
     }
 
