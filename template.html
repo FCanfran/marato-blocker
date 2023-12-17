@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Respira durante 60 segundos</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #counter-container {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+      position: relative;
+    }
+
+    #counter {
+      display: inline-block;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conta fins a 60 i respira fons</h1>
+
+  <div id="counter-container">
+    <div id="counter">60</div>
+  </div>
+
+  <script>
+    let seconds = 60;
+
+    function updateCounter() {
+      document.getElementById('counter').textContent = seconds;
+    }
+
+    function decrementCounter() {
+      seconds--;
+      updateCounter();
+
+      if (seconds <= 0) {
+        clearInterval(intervalId);
+        alert('Countdown reached zero!');
+      }
+    }
+
+    updateCounter();
+
+    const intervalId = setInterval(decrementCounter, 1000);
+  </script>
+
+  <h2>...l'impuls no té conseqüències negatives, però el consum de pornografia dura sí.</h2>
+</body>
+</html>
