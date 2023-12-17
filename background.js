@@ -1,6 +1,6 @@
 const blockList = [
-  "https://es.pornhub.com/", 
-  "https://www.pornhub.com/",
+  "https://es.pornhub.com", 
+  "https://www.pornhub.com",
   "https://xvdeos.com",
   "https://redtube.com",
   "https://chaturbate.com",
