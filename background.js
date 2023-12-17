@@ -11,7 +11,7 @@ const blockList = [
 chrome.runtime.onInstalled.addListener(function() {
     chrome.webNavigation.onCompleted.addListener(redirectIfNecessary);
 });
-chrome.webNavigation.onCompleted.addListener(redirectIfNecessary);
+chrome.webNaviggation.onCompleted.addListener(redirectIfNecessary);
 
 browser.runtime.onInstalled.addListener(function() {
 browser.webNavigation.onCompleted.addListener(redirectIfNecessary);
